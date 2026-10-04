@@ -63,7 +63,7 @@ export default function RentesRenteKalkulator() {
 
   <link
     rel="canonical"
-    href="https://norway-tools.vercel.app/rentes-rente"
+    href="https://norway-tools.vercel.app/rentes-rente-kalkulator"
   />
 </Head>
       <h1>Rentes rente-kalkulator</h1>
