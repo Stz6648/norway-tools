@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 
 export default function Overtidskalkulator() {
@@ -29,6 +30,24 @@ export default function Overtidskalkulator() {
         lineHeight: 1.6,
       }}
     >
+      <Head>
+  <title>Overtidskalkulator – Beregn overtidslønn i Norge</title>
+
+  <meta
+    name="description"
+    content="Gratis overtidskalkulator for Norge. Beregn overtidslønn basert på timelønn, overtidstillegg og antall overtidstimer."
+  />
+
+  <meta
+    name="robots"
+    content="index, follow"
+  />
+
+  <link
+    rel="canonical"
+    href="https://norway-tools.vercel.app/overtidskalkulator"
+  />
+</Head>
       <h1>Overtidskalkulator</h1>
 
       <p>
