@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 
 export default function FeriepengerKalkulator() {
@@ -23,6 +24,24 @@ export default function FeriepengerKalkulator() {
         lineHeight: 1.6,
       }}
     >
+      <Head>
+  <title>Feriepengekalkulator – Beregn feriepenger i Norge</title>
+
+  <meta
+    name="description"
+    content="Gratis feriepenger kalkulator. Beregn feriepenger basert på feriepengegrunnlag og feriepengesats."
+  />
+
+  <meta
+    name="robots"
+    content="index, follow"
+  />
+
+  <link
+    rel="canonical"
+    href="https://norway-tools.vercel.app/feriepenger-kalkulator"
+  />
+</Head>
       <h1>Feriepengekalkulator</h1>
 
       <p>
