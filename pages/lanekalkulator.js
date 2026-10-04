@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 
 export default function Lanekalkulator() {
@@ -47,6 +48,24 @@ export default function Lanekalkulator() {
         lineHeight: 1.6,
       }}
     >
+      <Head>
+  <title>Lånekalkulator – Beregn månedlig betaling og renter</title>
+
+  <meta
+    name="description"
+    content="Gratis lånekalkulator for Norge. Beregn månedlig betaling, total tilbakebetaling og totale renter på lån."
+  />
+
+  <meta
+    name="robots"
+    content="index, follow"
+  />
+
+  <link
+    rel="canonical"
+    href="https://norway-tools.vercel.app/lanekalkulator"
+  />
+</Head>
       <h1>Lånekalkulator</h1>
 
       <p>
