@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 
 export default function ProsentKalkulator() {
@@ -34,6 +35,24 @@ export default function ProsentKalkulator() {
         lineHeight: 1.6,
       }}
     >
+      <Head>
+  <title>Prosentkalkulator – Beregn prosent i Norge</title>
+
+  <meta
+    name="description"
+    content="Gratis prosentkalkulator. Beregn prosent, prosentøkning, prosentnedgang og prosentvis endring enkelt."
+  />
+
+  <meta
+    name="robots"
+    content="index, follow"
+  />
+
+  <link
+    rel="canonical"
+    href="https://norway-tools.vercel.app/prosent-kalkulator"
+  />
+</Head>
       <h1>Prosentkalkulator</h1>
 
       <p>
