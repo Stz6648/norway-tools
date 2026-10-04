@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 
 export default function MvaKalkulator() {
@@ -38,6 +39,24 @@ export default function MvaKalkulator() {
         lineHeight: 1.6,
       }}
     >
+      <Head>
+  <title>MVA-kalkulator – Beregn MVA i Norge</title>
+
+  <meta
+    name="description"
+    content="Gratis MVA-kalkulator for Norge. Beregn MVA med 25 %, 15 % eller 12 %, og finn beløp med eller uten MVA."
+  />
+
+  <meta
+    name="robots"
+    content="index, follow"
+  />
+
+  <link
+    rel="canonical"
+    href="https://norway-tools.vercel.app/mva-kalkulator"
+  />
+</Head>
       <h1>MVA-kalkulator</h1>
 
       <p>
