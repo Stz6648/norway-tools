@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 
 export default function Drivstoffkostnad() {
@@ -29,6 +30,18 @@ export default function Drivstoffkostnad() {
         lineHeight: 1.6,
       }}
     >
+      <Head>
+  <title>Drivstoffkalkulator – Beregn drivstoffkostnad</title>
+  <meta
+    name="description"
+    content="Gratis drivstoffkalkulator. Beregn drivstoffkostnad, forbruk og kostnad per kilometer for bilen din."
+  />
+  <meta name="robots" content="index, follow" />
+  <link
+    rel="canonical"
+    href="https://norway-tools.vercel.app/drivstoffkostnad"
+  />
+</Head>
       <h1>Drivstoffkostnad-kalkulator</h1>
 
       <p>
