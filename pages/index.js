@@ -1,5 +1,50 @@
 import { useState } from "react";
 
+const tools = [
+  {
+    title: "MVA-kalkulator",
+    description: "Beregn MVA med og uten merverdiavgift.",
+    link: "/mva-kalkulator",
+    icon: "🧾",
+  },
+  {
+    title: "Prosentkalkulator",
+    description: "Beregn prosent, økning, nedgang og endring.",
+    link: "/prosent-kalkulator",
+    icon: "📊",
+  },
+  {
+    title: "Feriepengekalkulator",
+    description: "Beregn feriepenger basert på feriepengegrunnlag.",
+    link: "/feriepenger-kalkulator",
+    icon: "🏖️",
+  },
+  {
+    title: "Overtidskalkulator",
+    description: "Beregn overtidslønn og total overtidsbetaling.",
+    link: "/overtidskalkulator",
+    icon: "⏱️",
+  },
+  {
+    title: "Lånekalkulator",
+    description: "Beregn månedlig betaling og totale renter.",
+    link: "/lanekalkulator",
+    icon: "🏦",
+  },
+  {
+    title: "Rentes rente",
+    description: "Se hvordan sparing kan vokse over tid.",
+    link: "/rentes-rente-kalkulator",
+    icon: "📈",
+  },
+  {
+    title: "Drivstoffkostnad",
+    description: "Beregn drivstofforbruk og kostnad per kilometer.",
+    link: "/drivstoffkostnad",
+    icon: "🚗",
+  },
+];
+
 export default function Home() {
   const [salary, setSalary] = useState("");
   const [hours, setHours] = useState("37.5");
@@ -8,8 +53,11 @@ export default function Home() {
   const weeklyHours = Number(hours) || 0;
 
   const monthlySalary = annualSalary / 12;
+
   const hourlySalary =
-    weeklyHours > 0 ? annualSalary / (weeklyHours * 52) : 0;
+    weeklyHours > 0
+      ? annualSalary / (weeklyHours * 52)
+      : 0;
 
   const formatNOK = (value) =>
     new Intl.NumberFormat("no-NO", {
@@ -19,27 +67,37 @@ export default function Home() {
   return (
     <main
       style={{
-        maxWidth: "900px",
+        maxWidth: "1000px",
         margin: "0 auto",
         padding: "40px 20px",
         fontFamily: "Arial, sans-serif",
         lineHeight: 1.6,
       }}
     >
-      <h1>Lønnskalkulator</h1>
+      <header style={{ textAlign: "center" }}>
+        <h1 style={{ fontSize: "38px", marginBottom: "10px" }}>
+          Norway Tools
+        </h1>
 
-      <p>
-        Beregn månedslønn og timelønn basert på årslønn og arbeidstid i Norge.
-      </p>
+        <p style={{ fontSize: "18px", color: "#555" }}>
+          Enkle og nyttige kalkulatorer for Norge
+        </p>
+      </header>
 
       <section
         style={{
-          marginTop: "30px",
+          marginTop: "35px",
           padding: "25px",
-          border: "1px solid #ddd",
-          borderRadius: "12px",
+          background: "#f5f5f5",
+          borderRadius: "14px",
         }}
       >
+        <h2>🧮 Lønnskalkulator</h2>
+
+        <p>
+          Beregn månedslønn og timelønn basert på årslønn og arbeidstid.
+        </p>
+
         <label>
           <strong>Årslønn</strong>
         </label>
@@ -55,13 +113,17 @@ export default function Home() {
             maxWidth: "450px",
             padding: "12px",
             marginTop: "8px",
-            marginBottom: "20px",
             fontSize: "16px",
             boxSizing: "border-box",
           }}
         />
 
-        <label>
+        <label
+          style={{
+            display: "block",
+            marginTop: "18px",
+          }}
+        >
           <strong>Arbeidstid per uke</strong>
         </label>
 
@@ -84,14 +146,12 @@ export default function Home() {
         {annualSalary > 0 && weeklyHours > 0 && (
           <div
             style={{
-              marginTop: "30px",
-              padding: "20px",
-              background: "#f5f5f5",
+              marginTop: "20px",
+              padding: "18px",
+              background: "white",
               borderRadius: "10px",
             }}
           >
-            <h2>Resultat</h2>
-
             <p>
               <strong>Månedslønn:</strong>{" "}
               {formatNOK(monthlySalary)} kr
@@ -101,50 +161,81 @@ export default function Home() {
               <strong>Timelønn:</strong>{" "}
               {formatNOK(hourlySalary)} kr
             </p>
-
-            <p>
-              <strong>Årslønn:</strong>{" "}
-              {formatNOK(annualSalary)} kr
-            </p>
           </div>
         )}
       </section>
 
       <section style={{ marginTop: "45px" }}>
-        <h2>Hvordan beregnes timelønn?</h2>
+        <h2>Alle kalkulatorer</h2>
 
-        <p>
-          Timelønn beregnes ved å dele årslønn på antall arbeidstimer per år.
-        </p>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "18px",
+            marginTop: "20px",
+          }}
+        >
+          {tools.map((tool) => (
+            <a
+              key={tool.link}
+              href={tool.link}
+              style={{
+                display: "block",
+                padding: "22px",
+                border: "1px solid #ddd",
+                borderRadius: "12px",
+                textDecoration: "none",
+                color: "#111",
+                background: "white",
+              }}
+            >
+              <div style={{ fontSize: "30px" }}>
+                {tool.icon}
+              </div>
 
-        <p>
-          Eksempel: Ved 600 000 kr i årslønn og 37,5 timer per uke blir
-          beregningen basert på 37,5 × 52 arbeidstimer per år.
-        </p>
+              <h3 style={{ marginBottom: "8px" }}>
+                {tool.title}
+              </h3>
+
+              <p
+                style={{
+                  margin: 0,
+                  color: "#666",
+                }}
+              >
+                {tool.description}
+              </p>
+            </a>
+          ))}
+        </div>
       </section>
 
-      <section style={{ marginTop: "40px" }}>
-        <h2>Vanlige spørsmål</h2>
+      <section style={{ marginTop: "50px" }}>
+        <h2>Nyttige kalkulatorer for Norge</h2>
 
-        <h3>Hva er timelønn?</h3>
         <p>
-          Timelønn er lønnen du tjener per arbeidstime.
+          Norway Tools samler enkle og praktiske kalkulatorer for lønn,
+          MVA, feriepenger, overtid, lån, sparing, prosent og
+          drivstoffkostnader.
         </p>
 
-        <h3>Hvordan regner man ut månedslønn?</h3>
         <p>
-          Årslønn deles normalt på 12 for å finne gjennomsnittlig månedslønn.
-        </p>
-
-        <h3>Kan jeg bruke kalkulatoren ved deltidsjobb?</h3>
-        <p>
-          Ja. Skriv inn din faktiske arbeidstid per uke.
+          Kalkulatorene er laget for å gjøre vanlige beregninger raskere
+          og enklere.
         </p>
       </section>
 
       <hr style={{ margin: "50px 0 20px" }} />
 
-      <p style={{ fontSize: "14px", color: "#666" }}>
+      <p
+        style={{
+          fontSize: "14px",
+          color: "#666",
+          textAlign: "center",
+        }}
+      >
         Norway Tools – enkle kalkulatorer og nyttige verktøy for Norge.
       </p>
     </main>
