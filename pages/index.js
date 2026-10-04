@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 
 const tools = [
@@ -65,6 +66,27 @@ export default function Home() {
     }).format(value);
 
   return (
+    <>
+    <Head>
+  <title>Norway Tools – Kalkulatorer og nyttige verktøy for Norge</title>
+
+  <meta
+    name="description"
+    content="Gratis kalkulatorer for Norge. Beregn lønn, MVA, feriepenger, overtid, lån, renter, prosent og drivstoffkostnader."
+  />
+
+  <meta
+    name="keywords"
+    content="kalkulator Norge, lønnskalkulator, MVA kalkulator, feriepenger kalkulator, lånekalkulator, prosentkalkulator"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://norway-tools.vercel.app/"
+  />
+</Head>
     <main
       style={{
         maxWidth: "1000px",
@@ -239,5 +261,6 @@ export default function Home() {
         Norway Tools – enkle kalkulatorer og nyttige verktøy for Norge.
       </p>
     </main>
+   </>
   );
 }
