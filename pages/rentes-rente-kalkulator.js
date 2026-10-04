@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 
 export default function RentesRenteKalkulator() {
@@ -47,6 +48,24 @@ export default function RentesRenteKalkulator() {
         lineHeight: 1.6,
       }}
     >
+      <Head>
+  <title>Rentes rente kalkulator – Beregn renters rente</title>
+
+  <meta
+    name="description"
+    content="Gratis rentes rente kalkulator. Beregn hvordan sparing og investering kan vokse over tid med renters rente."
+  />
+
+  <meta
+    name="robots"
+    content="index, follow"
+  />
+
+  <link
+    rel="canonical"
+    href="https://norway-tools.vercel.app/rentes-rente"
+  />
+</Head>
       <h1>Rentes rente-kalkulator</h1>
 
       <p>
