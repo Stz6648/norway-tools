@@ -260,6 +260,31 @@ export default function Home() {
       >
         Norway Tools – enkle kalkulatorer og nyttige verktøy for Norge.
       </p>
+          <footer
+  style={{
+    marginTop: "40px",
+    paddingTop: "20px",
+    borderTop: "1px solid #ddd",
+    textAlign: "center",
+    fontSize: "14px",
+  }}
+>
+  <a href="/om-oss" style={{ margin: "0 10px" }}>
+    Om oss
+  </a>
+
+  <a href="/kontakt" style={{ margin: "0 10px" }}>
+    Kontakt
+  </a>
+
+  <a href="/personvern" style={{ margin: "0 10px" }}>
+    Personvern
+  </a>
+
+  <a href="/vilkar" style={{ margin: "0 10px" }}>
+    Vilkår
+  </a>
+</footer>
     </main>
    </>
   );
