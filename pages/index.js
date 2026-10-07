@@ -3,6 +3,12 @@ import { useState } from "react";
 
 const tools = [
   {
+  title: "Lønnskalkulator",
+  description: "Beregn månedslønn og timelønn basert på årslønn.",
+  link: "/lonnskalkulator",
+  icon: "🧑‍💼",
+},
+  {
     title: "MVA-kalkulator",
     description: "Beregn MVA med og uten merverdiavgift.",
     link: "/mva-kalkulator",
